@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\http\Controllers\EventController;
+//use App\Models\User;
+
+Route::get('/', [EventController::class, 'index']);
+
+Route::get('/animes/create', [EventController::class, 'create']);
+
+Route::post('/animes', [EventController::class, 'store']);
+//Route::post('');
