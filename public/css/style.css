@@ -15,9 +15,26 @@ body {
 }
 
 .size-custom {
-    height: 450px;
+    height: 400px;
 }
 
+/* Estilo do Card*/
+.top-card{
+    margin-top: 3%;
+}
+
+.img-custom{
+    width: 230px;
+    height: 150px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.card-custom{
+    background-color: black;
+    color: white;
+    border: 1px solid blue;
+}
 
 /* Estilo do footer*/
 

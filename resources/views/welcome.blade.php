@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col">
-            <div class="container">
+            <div class="">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -54,14 +54,22 @@
             </div>
         </div>
     </div>
-    <div class="row">
-      <div class="col"></div>
+    <div class="container top-card">
+        <div class="row row-cols-5 row-cols-md-5 g-3">
+            @foreach ($events as $event)
+                <div class="col">
+                    <a href="">
+                        <div class="card card-custom">
+                            <img src=" image/{{ $event->image }}" class="card-img-top img-custom"
+                                alt="{{ $event->title }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $event->title }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </div>
-
-
-
-
-
-    <h1>Hello World</h1>
 
 @endsection
