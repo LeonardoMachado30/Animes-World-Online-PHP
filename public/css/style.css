@@ -85,9 +85,11 @@ body {
 
 
 .custom-video{
+    background-color: black;
     width: 800px;
     height: 500px;
-    border: 1px solid;
+    border: 4px solid black;
+    position: relative;
 }
 /* Estilo do footer*/
 
