@@ -52,4 +52,11 @@ class EventController extends Controller
             return redirect('/animes/create')->with('msg', 'Formato do arquivo nao e valido!');
         }
     }
+
+    public function show($id)
+    {
+        $animes = Event::findOrFail($id);
+
+        return view('animes.show', ['animes' => $animes]);
+    }
 }

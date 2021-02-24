@@ -17,8 +17,9 @@ use App\http\Controllers\EventController;
 //use App\Models\User;
 
 Route::get('/', [EventController::class, 'index']);
-
 Route::get('/animes/create', [EventController::class, 'create']);
-
+Route::get('/animes/{id}', [EventController::class, 'show']);
 Route::post('/animes', [EventController::class, 'store']);
+
+
 //Route::post('');

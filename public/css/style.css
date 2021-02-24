@@ -1,9 +1,11 @@
 * {
+    margin: 0;
     font-family: 'Roboto';
 }
 
 body {
     background-color: rgba(2, 2, 2, 0.767);
+    overflow-x: hidden;
 }
 
 
@@ -14,28 +16,79 @@ body {
     color: white !important;
 }
 
+.nav-link:hover{
+    color: red !important;
+}
+/* ESTILO DO TOPO*/
 .size-custom {
     height: 400px;
 }
 
+.img-custom-top{
+    background: linear-gradient(-40deg, blue, red) no-repeat;
+    background-size: 300% 300%;
+    height: 100vh;
+    font-size: 500%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: img-custom-top 5s ease-in-out infinite;
+}
+
+@keyframes img-custom-top {
+
+    0%{
+        background-position: 0 50%;
+    }
+
+    50%{
+        background-position: 50% 100%;
+    }
+
+    100%{
+        background-position: 50% 0;
+    }
+    
+}
 /* Estilo do Card*/
 .top-card{
     margin-top: 3%;
 }
 
-.img-custom{
-    width: 230px;
-    height: 150px;
-    padding-left: 10px;
-    padding-top: 10px;
+.img-custom-card{
+    width: auto;
+    height: 200px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-custom{
+    height: 300px;
     background-color: black;
     color: white;
     border: 1px solid blue;
 }
 
+
+/* ESTILO DO SHOW*/
+
+.box-show{
+    border: 2px solid black;
+    height: auto;
+    display: grid;
+    background-color: white;
+    padding-left: 5%;
+}
+
+
+.custom-video{
+    width: 800px;
+    height: 500px;
+    border: 1px solid;
+}
 /* Estilo do footer*/
 
 .footer {
