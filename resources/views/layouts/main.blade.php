@@ -20,49 +20,35 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <div class="container">
-                <a class="navbar-toggler" href="/">Inicio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/animes/create">Adicionar Anime</a>
-                        </li>
-                        <!--Validando se esta logado-->
-                        @auth
-                            <li class="nav-item">
-                                <a href="/dashboard" class="nav-link">Meus animes</a>
-                            </li>
-                            <li class="nav-item">
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <a href="/logout" class="nav-link" onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                        Sair</a>
-                                </form>
-                            </li>
-                        @endauth
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="/login">Entrar</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/register">Registrar</a>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <ul class="nav justify-content-end" style="position: relative;">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/animes/create">Adicionar Anime</a>
+            </li>
+            @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Meus animes</a>
+                </li>
+                <li class="nav-item">
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                            Sair</a>
+                    </form>
+                </li>
+            @endauth
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Registrar</a>
+                </li>
+            @endguest
+        </ul>
     </header>
 
     <main>

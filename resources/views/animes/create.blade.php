@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="container-fluid" style="color: black; background-color: white; padding-bottom: 2rem;">
+    <div class="container-fluid custom-container-create">
         <div id="event-create-container" class="col-md-6 offset-md-3">
 
-            <h1>Adicionar um Anime</h1>
+            <h1>Adicionar Anime</h1>
             @if (session('msg'))
                 <div class="alert alert-danger" role="alert">
-                    {{ session('msg')}}
+                    {{ session('msg') }}
                 </div>
             @endif
             <form action="/animes" method="POST" enctype="multipart/form-data">
