@@ -8,18 +8,17 @@ body {
     overflow-x: hidden;
 }
 
-
-/* Estilo do navbar*/
-
+/* ===============================ESTILO DO NAVBAR===========================*/
 .nav-link,
 .navbar-brand {
-    color: white !important;
+    color: black !important;
 }
 
 .nav-link:hover{
     color: red !important;
 }
-/* ESTILO DO TOPO*/
+
+/* ===============================ESTILO DO TOPO===========================*/
 .size-custom {
     height: 400px;
 }
@@ -35,16 +34,10 @@ body {
     justify-content: center;
     color: white;
     animation: img-custom-top 10s ease-in-out infinite;
+    position: relative;
+    z-index: -1;
 }
-
-@media only screen and (max-width: 900px) {
-    .img-custom-top{
-        margin-top: -80px;
-        height: 120vh;
-        font-size: 200%;
-    }
-  }
-
+/*************ANIMAÇÃO DA IMAGEM**************/
 @keyframes img-custom-top {
 
     0%{
@@ -60,7 +53,8 @@ body {
     }
     
 }
-/* Estilo do Card*/
+
+/* ===============================ESTILO DO CARD===========================*/
 .top-card{
     margin-top: 3%;
 }
@@ -68,10 +62,11 @@ body {
 .img-custom-card{
     width: auto;
     height: 200px;
-    padding: 10px 10px;
+    padding: 2px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px !important;
 }
 
 .card-custom{
@@ -80,6 +75,8 @@ body {
     color: white;
     border: 1px solid blue;
 }
+
+/*****************************ESTILO DO CREATE*******************************/
 .custom-container-create{
     color: black; 
     background-color: white; 
@@ -87,7 +84,7 @@ body {
     padding-top: 5%;
 }
 
-/* ESTILO DO SHOW*/
+/* ===============================ESTILO DO SHOW===========================*/
 
 .box-show{
     border: 2px solid black;
@@ -97,13 +94,20 @@ body {
     padding-left: 5%;
 }
 
+.text-custom-show{
+    font-size: 30pt;
+    padding-left: 2%;
+}
+.video-custom-div {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
-.custom-video{
+.video-custom{
     background-color: black;
-    width: 800px;
-    height: 500px;
-    border: 4px solid black;
-    position: relative;
+    width: 100%;
+    height: 400px;
 }
 
 .row-container-custom{
@@ -114,7 +118,7 @@ body {
     box-shadow:yellow;
 
 }
-/* Estilo do footer*/
+/* ===============================ESTILO DO FOOTER===========================*/
 
 .footer {
     align-items: center !important;
@@ -125,4 +129,30 @@ body {
     color: #000000 !important;
     border-radius: 10px 10px 0px 0px;
     bottom: 0;
+}
+
+/***************BOTÃO RESPONSIVO**************/
+
+/* ================================RESPONSIVIDADE=====================*/
+
+@media only screen and (max-width: 800px){
+    body{
+        overflow-x: hidden !important;
+    }
+    .img-custom-top{
+        margin-top: -20px;
+        height: 120vh;
+        font-size: 200%;
+        position: relative;
+        height: 100vh;
+    }
+
+    button, li { 
+        margin-left: 20px !important;
+    }
+    button{
+        background-color: rgba(2, 2, 2, 0.513) !important;
+        margin-bottom: 10px;
+    }
+
 }
